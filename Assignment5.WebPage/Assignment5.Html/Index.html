@@ -64,7 +64,7 @@
                     margin-right: 7px;
                 }
 
-                .header .search-bar2 .check-out, .header .search-bar2 .check-in {
+                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type {
                     width: calc(33% - 8px);
                     float: left;
                     margin-top: 7px;
@@ -88,9 +88,6 @@
 
                 .header .search-bar2 .room-type {
                     background-color: burlywood;
-                    width: calc(33% - 8px);
-                    float: left;
-                    margin-top: 7px;
                     margin-left: 7px;
                 }
 
@@ -119,7 +116,13 @@
                         <input type="date" name="checkOut">
                     </div>
                     <div class="room-type">
-                        room-type
+                        <select id="room-type-select" name="roomType">
+                            <option value>Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+
                     </div>
 
                 </div>
