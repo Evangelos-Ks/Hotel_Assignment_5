@@ -17,7 +17,7 @@
             background-color: #37454d;
         }
 
-            .header .search-bar {
+            .header .search-bar, .header .search-bar3, .header .search-bar2 {
                 width: 100%;
                 margin-left: 10px;
                 margin-right: 10px;
@@ -52,12 +52,6 @@
                     padding: 5px 32px;
                     float: left;
                 }
-
-            .header .search-bar2 {
-                width: 100%;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
 
                 .header .search-bar2 .check-in {
                     background-color: #007fad;
@@ -106,6 +100,24 @@
                         padding-left: 50px;
                     }
 
+                .header .search-bar3 .price .justify-content-center .w-75 p {
+                    color: lightgray;
+                    font-weight: 600;
+                    font-size: 14px;
+                    height: 40%;
+                    position: relative;
+                    bottom: 30px;
+                }
+
+                    .header .search-bar3 .price .justify-content-center .w-75 p span {
+                        float: right;
+                    }
+
+                .header .search-bar3 .price .justify-content-center .w-75 input[type="range"] {
+                    position: relative;
+                    /*bottom: 10px;*/
+                }
+
         @media screen and (max-width:800px) {
             .search-bar input[type="search"], .search-bar button[type="submit"] {
                 width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -142,8 +154,7 @@
                         <div class="price">
                             <div class="d-flex justify-content-center my-4">
                                 <div class="w-75">
-                                    <label for="price">Price</label>
-                                    <span class="ml-2 valueSpan2"></span>
+                                    <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
                                     <input type="range" class="custom-range" id="customRange11" min="0" max="200" name="price">
                                 </div>
                             </div>
@@ -180,19 +191,9 @@
             });
         });
     </script>
-    <!--<script>
-        (function () {
-            document.getElementById("dispay-room-type").style.display = "none";
-            document.querySelector(".border").addEventListener("click", function () {
-                document.getElementById("dispay-room-type").style.display = "inline";
-                document.querySelector(".border").style.display = "none";
-            })
-        })();
 
-
-    </script>-->
-                                    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-                                    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
 
 </body>
 </html>
