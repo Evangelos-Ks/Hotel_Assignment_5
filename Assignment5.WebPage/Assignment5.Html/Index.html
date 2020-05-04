@@ -64,7 +64,7 @@
                     margin-right: 7px;
                 }
 
-                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type {
+                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .price {
                     width: calc(33% - 8px);
                     float: left;
                     margin-top: 7px;
@@ -96,16 +96,9 @@
                     padding-left: 50px;
                 }
 
-                    /*.header .search-bar2 .room-type .border {
-                        margin-left: 5px;
-                        border-style: dotted;
-                    }*/
-
-
-
                     .header .search-bar2 .room-type #room-type-select {
                         width: 95%;
-                        height: 38px;
+                        height: 40px;
                         border: none;
                         margin-left: 5px;
                         -moz-appearance: none;
@@ -130,7 +123,7 @@
                     <input type="search" name="search">
                     <button type="submit">Search</button>
                 </div>
-                <div class="search-bar2 row ">
+                <div class="search-bar2">
                     <div class="check-in">
                         <input type="date" name="checkIn">
                     </div>
@@ -145,6 +138,17 @@
                             <option value="FamilyRooms">Family rooms</option>
                         </select>
                     </div>
+                    <div class="search-bar3">
+                        <div class="price">
+                            <div class="d-flex justify-content-center my-4">
+                                <div class="w-75">
+                                    <label for="price">Price</label>
+                                    <span class="ml-2 valueSpan2"></span>
+                                    <input type="range" class="custom-range" id="customRange11" min="0" max="200" name="price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </form>
@@ -153,6 +157,8 @@
         <div class="body">
 
         </div>
+
+
     </div>
 
 
@@ -162,6 +168,18 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="../Scripts/bootstrap.js"></script>
 
+    <script>
+        $(document).ready(function () {
+
+            const $valueSpan = $('.valueSpan2');
+            const $value = $('#customRange11');
+            $valueSpan.html($value.val());
+            $value.on('input change', () => {
+
+                $valueSpan.html($value.val());
+            });
+        });
+    </script>
     <!--<script>
         (function () {
             document.getElementById("dispay-room-type").style.display = "none";
@@ -173,8 +191,8 @@
 
 
     </script>-->
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+                                    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+                                    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
 
 </body>
 </html>
