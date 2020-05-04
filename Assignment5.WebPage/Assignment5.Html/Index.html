@@ -87,9 +87,31 @@
                     }
 
                 .header .search-bar2 .room-type {
-                    background-color: burlywood;
                     margin-left: 7px;
+                    background-color: white;
+                    background-image: url('../Assignment5.Imagies/Rooms_type.png');
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    background-position: 16px center;
+                    padding-left: 50px;
                 }
+
+                    /*.header .search-bar2 .room-type .border {
+                        margin-left: 5px;
+                        border-style: dotted;
+                    }*/
+
+
+
+                    .header .search-bar2 .room-type #room-type-select {
+                        width: 95%;
+                        height: 38px;
+                        border: none;
+                        margin-left: 5px;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        padding-left: 50px;
+                    }
 
         @media screen and (max-width:800px) {
             .search-bar input[type="search"], .search-bar button[type="submit"] {
@@ -117,12 +139,11 @@
                     </div>
                     <div class="room-type">
                         <select id="room-type-select" name="roomType">
-                            <option value>Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                            <option value="" disabled selected>Room Type</option>
+                            <option value="Single">Single</option>
+                            <option value="Double">Double</option>
+                            <option value="FamilyRooms">Family rooms</option>
                         </select>
-
                     </div>
 
                 </div>
@@ -138,12 +159,22 @@
 
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.5.0.js"></script>
-    <script src="../Scripts/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="../Scripts/bootstrap.js"></script>
 
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+    <!--<script>
+        (function () {
+            document.getElementById("dispay-room-type").style.display = "none";
+            document.querySelector(".border").addEventListener("click", function () {
+                document.getElementById("dispay-room-type").style.display = "inline";
+                document.querySelector(".border").style.display = "none";
+            })
+        })();
+
+
+    </script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
 
 </body>
 </html>
