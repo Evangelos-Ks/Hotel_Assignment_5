@@ -17,7 +17,7 @@
             background-color: #37454d;
         }
 
-            .header .search-bar, .header .search-bar3, .header .search-bar2 {
+            .header .search-bar, .header .search-bar2, .header .search-bar3 {
                 width: 100%;
                 margin-left: 10px;
                 margin-right: 10px;
@@ -58,7 +58,7 @@
                     margin-right: 7px;
                 }
 
-                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .price {
+                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .header .search-bar3 .left-border {
                     width: calc(33% - 8px);
                     float: left;
                     margin-top: 7px;
@@ -100,22 +100,42 @@
                         padding-left: 50px;
                     }
 
-                .header .search-bar3 .price .justify-content-center .w-75 p {
+                .header .search-bar3 .left-border {
+                    width: calc(33% - 17px);
+                    border-right: solid;
+                    border-color: gray;
+                    border-width: 2px;
+                    margin-right: 10px;
+                    margin-top: 5px;
+                }
+
+                .header .search-bar3 .price {
+                    /*border-right: solid;
+                    border-color: gray;
+                    border-width: 2px;*/
+                    /*margin-right: 10px;
+                    margin-top: 5px;*/
+                    width: calc(100% - 24px);
+                    height: 40px;
+                }
+
+                .header .search-bar3 .left-border .price p {
+                    width: calc(100%-7px);
                     color: lightgray;
                     font-weight: 600;
                     font-size: 14px;
-                    height: 40%;
-                    position: relative;
-                    bottom: 30px;
+                    margin-right: 7px;
                 }
 
-                    .header .search-bar3 .price .justify-content-center .w-75 p span {
+                    .header .search-bar3 .left-border .price p span {
                         float: right;
                     }
 
-                .header .search-bar3 .price .justify-content-center .w-75 input[type="range"] {
+                .header .search-bar3 .left-border .price #customRange1 {
                     position: relative;
-                    /*bottom: 10px;*/
+                    bottom: 20px;
+                    width: calc(100%- 20px);
+                    margin-right: 7px;
                 }
 
         @media screen and (max-width:800px) {
@@ -151,12 +171,18 @@
                         </select>
                     </div>
                     <div class="search-bar3">
-                        <div class="price">
-                            <div class="d-flex justify-content-center my-4">
-                                <div class="w-75">
-                                    <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
-                                    <input type="range" class="custom-range" id="customRange11" min="0" max="200" name="price">
-                                </div>
+                        <div class="left-border">
+                            <div class="price">
+                                <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
+                                <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="property-type">
+
+                            </div>
+                            <div class="guest-rating">
+
                             </div>
                         </div>
                     </div>
@@ -182,14 +208,19 @@
     <script>
         $(document).ready(function () {
 
+            displayMaxValue();
+
+        });
+
+        function displayMaxValue() {
             const $valueSpan = $('.valueSpan2');
-            const $value = $('#customRange11');
+            const $value = $('#customRange1');
             $valueSpan.html($value.val());
             $value.on('input change', () => {
 
                 $valueSpan.html($value.val());
             });
-        });
+        }
     </script>
 
     <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
