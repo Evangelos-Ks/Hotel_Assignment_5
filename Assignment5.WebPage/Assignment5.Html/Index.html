@@ -110,11 +110,6 @@
                 }
 
                 .header .search-bar3 .price {
-                    /*border-right: solid;
-                    border-color: gray;
-                    border-width: 2px;*/
-                    /*margin-right: 10px;
-                    margin-top: 5px;*/
                     width: calc(100% - 24px);
                     height: 40px;
                 }
@@ -137,6 +132,40 @@
                     width: calc(100%- 20px);
                     margin-right: 7px;
                 }
+
+                .header .search-bar3 .center-border {
+                    width: calc(33% - 17px);
+                }
+
+                    .header .search-bar3 .center-border .property-type {
+                        width: calc(50% - 24px);
+                        height: 40px;
+                        border-right: solid;
+                        border-color: gray;
+                        border-width: 2px;
+                        margin-right: 10px;
+                        margin-top: 5px;
+                    }
+
+                .header .search-bar3 .center-border .property-type p {
+                    width: calc(100%-7px);
+                    color: lightgray;
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin-right: 7px;
+                }
+
+                .header .search-bar3 .center-border .property-type #property-type {
+                    position: relative;
+                    bottom: 10px;
+                    width: calc(100%- 20px);
+                    margin-right: 7px;
+                    background-color: inherit;
+                    color: lightgray;
+                    font-weight: 400;
+                    border: none;
+                }
+
 
         @media screen and (max-width:800px) {
             .search-bar input[type="search"], .search-bar button[type="submit"] {
@@ -170,16 +199,24 @@
                             <option value="FamilyRooms">Family rooms</option>
                         </select>
                     </div>
-                    <div class="search-bar3">
+                    <div class="search-bar3 row">
                         <div class="left-border">
                             <div class="price">
                                 <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
                                 <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
                             </div>
                         </div>
-                        <div class="">
+                        <div class="center-border">
                             <div class="property-type">
-
+                                <p>Property type</p>
+                                <select id="property-type" name="propertyType">
+                                    <option disabled selected>All</option>
+                                    <option style="color:black" value="Onestar">One star</option>
+                                    <option style="color:black" value="Twostars">Two stars</option>
+                                    <option style="color:black" value="Threestars">Three stars</option>
+                                    <option style="color:black" value="Fourstars">Four stars</option>
+                                    <option style="color:black" value="Fivestars">Five stars</option>
+                                </select>
                             </div>
                             <div class="guest-rating">
 
