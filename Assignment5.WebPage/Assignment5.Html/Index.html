@@ -17,7 +17,7 @@
             background-color: #37454d;
         }
 
-            .header .search-bar, .header .search-bar2, .header .search-bar3 {
+            .header .search-bar, .header .search-bar2, .header .search-bar3, .body .first-body-row {
                 width: 100%;
                 margin-left: 10px;
                 margin-right: 10px;
@@ -172,6 +172,30 @@
                         margin-left: 5px;
                     }
 
+        .body {
+            background-color: #ebeced;
+        }
+
+            .body .first-body-row {
+                width: calc(100% - 20px);
+                margin-left: 10px;
+                height: 45px;
+                background-color: aqua;
+
+            }
+            
+            .body .first-body-row #backgroundMap{
+                
+            }
+
+                .body .first-body-row #map {
+                    font-weight: 600;
+                    font-size: 14px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
 
 
 
@@ -261,7 +285,11 @@
 
         </div>
         <div class="body">
-
+            <div class="first-body-row row">
+                <div id="backgroundMap">
+                    <button id="map">View Map</button>
+                </div>
+            </div>
         </div>
 
 
