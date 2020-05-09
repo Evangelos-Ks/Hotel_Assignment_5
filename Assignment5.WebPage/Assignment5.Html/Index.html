@@ -58,7 +58,7 @@
                     margin-right: 7px;
                 }
 
-                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .header .search-bar3 .left-border, .header .search-bar3 .left-border, .header .search-bar3 .center-border {
+                .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .header .search-bar3 .left-border, .header .search-bar3 .left-border, .header .search-bar3 .center-border, .header .search-bar3 .right-border {
                     width: calc(33% - 8px);
                     float: left;
                     margin-top: 7px;
@@ -107,51 +107,12 @@
                     margin-right: 7px;
                 }
 
-                .header .search-bar3 .price {
-                    width: calc(100% - 24px);
-                    height: 40px;
-                }
-
-                .header .search-bar3 .left-border .price p {
-                    width: calc(100%-7px);
-                    color: lightgray;
-                    font-weight: 600;
-                    font-size: 14px;
-                    margin-right: 7px;
-                }
-
-                    .header .search-bar3 .left-border .price p span {
-                        float: right;
-                    }
-
-                .header .search-bar3 .left-border .price #customRange1 {
-                    position: relative;
-                    bottom: 20px;
-                    width: calc(100%- 20px);
-                    margin-right: 7px;
-                }
-
-                .header .search-bar3 .center-border {
-                    margin-left: 0px;
-                }
-
-                    .header .search-bar3 .center-border .property-type {
-                        width: calc(50% - 20px);
-                        height: 40px;
-                        border-right: solid;
-                        border-color: gray;
-                        border-width: 2px;
-                        margin-left: 10px;
-                        margin-right: 10px;
-                    }
-
-                    .header .search-bar3 .center-border .guest-rating {
-                        width: calc(50% - 20px);
+                    .header .search-bar3 .left-border .price {
+                        width: calc(100% - 24px);
                         height: 40px;
                     }
 
-
-                        .header .search-bar3 .center-border .property-type p, .header .search-bar3 .center-border .guest-rating p {
+                        .header .search-bar3 .left-border .price p {
                             width: calc(100%-7px);
                             color: lightgray;
                             font-weight: 600;
@@ -159,20 +120,59 @@
                             margin-right: 7px;
                         }
 
-                        .header .search-bar3 .center-border .property-type #property-type, .header .search-bar3 .center-border .guest-rating #guest-rating {
+                            .header .search-bar3 .left-border .price p span {
+                                float: right;
+                            }
+
+                        .header .search-bar3 .left-border .price #customRange1 {
                             position: relative;
-                            bottom: 12px;
+                            bottom: 20px;
                             width: calc(100%- 20px);
                             margin-right: 7px;
-                            background-color: inherit;
-                            color: lightgray;
-                            font-weight: 400;
-                            border: none;
                         }
 
-                        .header .search-bar3 .center-border .guest-rating p, .header .search-bar3 .center-border .guest-rating #guest-rating {
-                            margin-left: 5px;
-                        }
+                .header .search-bar3 .center-border, .header .search-bar3 .right-border {
+                    margin-left: 0px;
+                }
+
+                    .header .search-bar3 .center-border .property-type {
+                        width: calc(50% - 2px);
+                        height: 40px;
+                        border-right: solid;
+                        border-color: gray;
+                        border-width: 2px;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+
+                    .header .search-bar3 .center-border .guest-rating, .header .search-bar3 .right-border .lacation, .header .search-bar3 .right-border .filter {
+                        width: calc(50% - 2px);
+                        height: 40px;
+                    }
+
+
+                    .header .search-bar3 .center-border p, .header .search-bar3 .right-border p {
+                        width: calc(100%-7px);
+                        color: lightgray;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+
+                    .header .search-bar3 .center-border .property-type #property-type, .header .search-bar3 .center-border .guest-rating #guest-rating, .header .search-bar3 .right-border .lacation #lacation, .header .search-bar3 .right-border .filter #filter {
+                        position: relative;
+                        bottom: 12px;
+                        width: 100%;
+                        background-color: inherit;
+                        color: lightgray;
+                        font-weight: 400;
+                        border: none;
+                    }
+
+                    .header .search-bar3 .center-border .guest-rating p, .header .search-bar3 .center-border .guest-rating #guest-rating {
+                        margin-left: 5px;
+                    }
+
+
 
 
         @media screen and (max-width:800px) {
@@ -228,7 +228,7 @@
                             </select>
                         </div>
                         <div class="guest-rating">
-                            <p>Property type</p>
+                            <p>Guest rating</p>
                             <select id="guest-rating" name="guestrating">
                                 <option disabled selected>All</option>
                                 <option style="color:black" value="Onestar">One star</option>
@@ -236,6 +236,22 @@
                                 <option style="color:black" value="Threestars">Three stars</option>
                                 <option style="color:black" value="Fourstars">Four stars</option>
                                 <option style="color:black" value="Fivestars">Five stars</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="right-border row">
+                        <div class="lacation">
+                            <p>Hotel location</p>
+                            <select id="lacation" name="lacation">
+                                <option disabled selected>All</option>
+                                <option style="color:black" value="City">city</option>
+                            </select>
+                        </div>
+                        <div class="filter">
+                            <p>Filters</p>
+                            <select id="filter" name="filters">
+                                <option disabled selected>All</option>
+                                <option style="color:black" value="City">Filters</option>
                             </select>
                         </div>
                     </div>
