@@ -179,12 +179,12 @@
             .body .first-body-row {
                 width: calc(100% - 20px);
                 margin-left: 10px;
-                height: 45px;
+                height: 50px;
                 background-color: inherit;
             }
 
                 .body .first-body-row #backgroundMap {
-                    width: 15%;
+                    width: 20%;
                     height: 80%;
                     background-image: url('../Assignment5.Imagies/mapImage.PNG');
                     background-size: 100%;
@@ -199,7 +199,7 @@
                     font-size: 13px;
                     padding-left: 7px;
                     padding-right: 7px;
-                    margin-left: 27px;
+                    margin-left: 50px;
                     margin-top: 5px;
                     border-width: 1px;
                     border-color: lightslategray;
@@ -207,7 +207,7 @@
                 }
 
                 .body .first-body-row #empty1 {
-                    width: 49%;
+                    width: 44%;
                 }
 
                 .body .first-body-row #sortBy-div-text {
@@ -233,13 +233,35 @@
                 }
 
             /*=============================== Second row of main body========================================================*/
-            .body .second-body-row .image img {
-                width: 160px;
-                height: 160px;
+            .body .container-shadow {
+                background-color: white;
+                box-shadow: 1px 1px 4px 1px grey;
+                border-radius: 2px;
+                width: calc(100% - 20px);
+                margin-left: 0px;
             }
 
+            .body .second-body-row .image {
+                margin-right: 2px;
+            }
+
+                .body .second-body-row .image img {
+                    margin-left: 1px;
+                    margin-top: 1px;
+                    margin-bottom: 1px;
+                    border-radius: 2px 0px 0px 2px;
+                    width: 210px;
+                    height: 210px;
+                }
+
             .body .second-body-row .Imformation1 {
+                margin-top: 3px;
+                margin-bottom: 3px;
                 margin-left: 3px;
+                width: calc(35% - 10px);
+                border-right: solid;
+                border-color: lightgray;
+                border-width: 2px;
             }
 
                 .body .second-body-row .Imformation1 #hotelName {
@@ -266,6 +288,23 @@
                         margin-left: 10px;
                         font-size: 12px;
                     }
+
+            .body .second-body-row #city {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .body .second-body-row #raitings :first-child{
+                color:white;
+                background-color: #316300;
+                padding: 3px;
+                border-radius: 3px;
+            }
+
+            .body .second-body-row #raitings span {
+                font-size: 14px;
+                font-weight: 700;
+            }
 
         @media screen and (max-width:800px) {
             .search-bar input[type="search"], .search-bar button[type="submit"] {
@@ -384,27 +423,36 @@
                 </div>
             </div>
             <!--=============================== Second row of main body==================================================-->
-            <div class="second-body-row row">
-                <!--------------------------------- Image ----------------------------------------------------------------->
-                <div class="image">
-                    <img src="http://comerciodearrecife.com/wp-content/uploads/hotel-prueba-1.jpg" alt="" />
-                </div>
-                <!--------------------------------- Imformation1 ---------------------------------------------------------->
-                <div class="Imformation1">
-                    <p id="hotelName">Hotel Lancaster</p>
-
-                    <div id="starRating-div" class="row">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <p>Hotel</p>
+            <div class="second-body-row">
+                <div class="container-shadow row">
+                    <!--------------------------------- Image ----------------------------------------------------------------->
+                    <div class="image">
+                        <img src="http://comerciodearrecife.com/wp-content/uploads/hotel-prueba-1.jpg" alt="" />
                     </div>
+                    <!--------------------------------- Imformation1 ---------------------------------------------------------->
+                    <div class="Imformation1">
+                        <p id="hotelName">Hotel Lancaster</p>
+
+                        <div id="starRating-div" class="row">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p>Hotel</p>
+                        </div>
+
+                        <div id="city">
+                            <p>Paris</p>
+                        </div>
+
+                        <div id="raitings">
+                            <span id="ratings-no">8.8</span>
+                            <span id="ratings-text">Excellent</span>
+                        </div>
 
 
-
-
+                    </div>
                 </div>
             </div>
         </div>
