@@ -17,7 +17,7 @@
             background-color: #37454d;
         }
 
-            .header .search-bar, .header .search-bar2, .header .search-bar3, .body .first-body-row {
+            .header .search-bar, .header .search-bar2, .header .search-bar3, .body .first-body-row, .body .second-body-row {
                 width: 100%;
                 margin-left: 10px;
                 margin-right: 10px;
@@ -232,6 +232,41 @@
                     width: 240px;
                 }
 
+            /*=============================== Second row of main body========================================================*/
+            .body .second-body-row .image img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .body .second-body-row .Imformation1 {
+                margin-left: 3px;
+            }
+
+                .body .second-body-row .Imformation1 #hotelName {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 0px;
+                }
+
+                .body .second-body-row .Imformation1 #starRating-div {
+                    margin: inherit;
+                }
+
+                    .body .second-body-row .Imformation1 #starRating-div span {
+                        font-size: 9px;
+                        margin-top: 5px;
+                    }
+
+
+                    .body .second-body-row .Imformation1 #starRating-div .checked {
+                        color: orange;
+                    }
+
+                    .body .second-body-row .Imformation1 #starRating-div p {
+                        margin-left: 10px;
+                        font-size: 12px;
+                    }
+
         @media screen and (max-width:800px) {
             .search-bar input[type="search"], .search-bar button[type="submit"] {
                 width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -245,17 +280,22 @@
     <div class="container ">
         <div class="header">
             <form action="/action_page.php">
+                <!--=============================== search-bar row 1 ====================================================-->
                 <div class="search-bar row">
                     <input type="search" name="search">
                     <button type="submit">Search</button>
                 </div>
+                <!--=============================== search-bar row 2 ====================================================-->
                 <div class="search-bar2">
+                    <!--------------------------------- check-in ---------------------------------------------------------->
                     <div class="check-in">
                         <input type="date" name="checkIn">
                     </div>
+                    <!--------------------------------- check-out --------------------------------------------------------->
                     <div class="check-out">
                         <input type="date" name="checkOut">
                     </div>
+                    <!--------------------------------- room-type --------------------------------------------------------->
                     <div class="room-type">
                         <select id="room-type-select" name="roomType">
                             <option value="" disabled selected>Room Type</option>
@@ -265,13 +305,16 @@
                         </select>
                     </div>
                 </div>
+                <!--=============================== search-bar row 3 ====================================================-->
                 <div class="search-bar3 row">
+                    <!--------------------------------- left-part --------------------------------------------------------->
                     <div class="left-border">
                         <div class="price">
                             <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
                             <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
                         </div>
                     </div>
+                    <!--------------------------------- cntral-part ------------------------------------------------------->
                     <div class="center-border row">
                         <div class="property-type">
                             <p>Property type</p>
@@ -296,6 +339,7 @@
                             </select>
                         </div>
                     </div>
+                    <!--------------------------------- right-part -------------------------------------------------------->
                     <div class="right-border row">
                         <div class="lacation">
                             <p>Hotel location</p>
@@ -318,12 +362,16 @@
 
         </div>
         <div class="body">
+            <!--=============================== First row of main body===================================================-->
             <div class="first-body-row row">
+                <!--------------------------------- Map ------------------------------------------------------------------->
                 <div id="backgroundMap">
                     <button id="map">View Map</button>
                 </div>
+                <!--------------------------------- empty1 ---------------------------------------------------------------->
                 <dv id="empty1">
                 </dv>
+                <!--------------------------------- Sorting --------------------------------------------------------------->
                 <div id="sortBy-div-text">
                     <p>Sort by</p>
                 </div>
@@ -333,6 +381,30 @@
                         <option style="color:black" value="City">Filters</option>
                     </select>
                     <i class="fa fa-info-circle" style="font-size:20px; color: gray;"></i>
+                </div>
+            </div>
+            <!--=============================== Second row of main body==================================================-->
+            <div class="second-body-row row">
+                <!--------------------------------- Image ----------------------------------------------------------------->
+                <div class="image">
+                    <img src="http://comerciodearrecife.com/wp-content/uploads/hotel-prueba-1.jpg" alt="" />
+                </div>
+                <!--------------------------------- Imformation1 ---------------------------------------------------------->
+                <div class="Imformation1">
+                    <p id="hotelName">Hotel Lancaster</p>
+
+                    <div id="starRating-div" class="row">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <p>Hotel</p>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>
