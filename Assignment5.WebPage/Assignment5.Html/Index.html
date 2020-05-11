@@ -254,7 +254,7 @@
                     height: 210px;
                 }
 
-            .body .second-body-row .Imformation1 {
+            .body .second-body-row .Imformation1, .body .second-body-row .Imformation2 {
                 margin-top: 3px;
                 margin-bottom: 3px;
                 margin-left: 3px;
@@ -275,7 +275,7 @@
                 }
 
                     .body .second-body-row .Imformation1 #starRating-div span {
-                        font-size: 9px;
+                        font-size: 10px;
                         margin-top: 5px;
                     }
 
@@ -286,28 +286,54 @@
 
                     .body .second-body-row .Imformation1 #starRating-div p {
                         margin-left: 10px;
-                        font-size: 12px;
+                        font-size: 13px;
                     }
 
-            .body .second-body-row #city {
-                font-size: 14px;
-                font-weight: 600;
+                .body .second-body-row .Imformation1 #city {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .body .second-body-row .Imformation1 #raitings :first-child {
+                    color: white;
+                    background-color: #316300;
+                    padding: 3px;
+                    border-radius: 3px;
+                }
+
+                .body .second-body-row .Imformation1 #raitings #ratings-no, .body .second-body-row #raitings #ratings-text {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                .body .second-body-row .Imformation1 #raitings #ratings-no, .body .second-body-row #raitings #number-of-reviews {
+                    font-size: 14px;
+                }
+
+                .body .second-body-row .Imformation1 #location-rating {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+
+            .body .second-body-row .Imformation2 {
+                background-color: lightblue;
+                width: 15%;
+                font-size: 13px;
+                margin-left: 0px;
             }
 
-            .body .second-body-row #raitings :first-child{
-                color:white;
-                background-color: #316300;
-                padding: 3px;
-                border-radius: 3px;
-            }
+                .body .second-body-row .Imformation2 #first-price {
+                    background-color: lightcoral;
+                    margin-left : 8px;
+                    margin-right : 8px;
+                }
+                    .body .second-body-row .Imformation2 #first-price span{
+                        
+                    }
 
-            .body .second-body-row #raitings span {
-                font-size: 14px;
-                font-weight: 700;
-            }
 
-        @media screen and (max-width:800px) {
-            .search-bar input[type="search"], .search-bar button[type="submit"] {
+                    @media screen and (max-width:800px) {
+                        .search-bar input[type="search"], .search-bar button[type="submit"] {
                 width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
             }
         }
@@ -432,30 +458,38 @@
                     <!--------------------------------- Imformation1 ---------------------------------------------------------->
                     <div class="Imformation1">
                         <p id="hotelName">Hotel Lancaster</p>
-
                         <div id="starRating-div" class="row">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
                             <p>Hotel</p>
                         </div>
-
                         <div id="city">
                             <p>Paris</p>
                         </div>
-
                         <div id="raitings">
                             <span id="ratings-no">8.8</span>
                             <span id="ratings-text">Excellent</span>
+                            (<span id="number-of-reviews">1440</span> reviews)
                         </div>
 
-
+                        <div id="location-rating">
+                            <p><span id="ratings-text">Excellent</span> location (<span id="ratings-no">8.6</span>/10)</p>
+                        </div>
+                    </div>
+                    <!--------------------------------- Imformation2 ---------------------------------------------------------->
+                    <div class="Imformation2">
+                        <div id="first-price">
+                            <span>Hotel website</span><br />
+                            $<span>706</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
     </div>
