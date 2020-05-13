@@ -265,7 +265,7 @@
             }
 
                 .body .second-body-row .Imformation1 #hotelName {
-                    font-size: 18px;
+                    font-size: 23px;
                     font-weight: 600;
                     margin-bottom: 0px;
                 }
@@ -316,24 +316,37 @@
                 }
 
             .body .second-body-row .Imformation2 {
-                background-color: lightblue;
                 width: 15%;
-                font-size: 13px;
+                font-weight: 600;
                 margin-left: 0px;
             }
 
                 .body .second-body-row .Imformation2 #first-price {
-                    background-color: lightcoral;
-                    margin-left : 8px;
-                    margin-right : 8px;
+                    background-color: #e5f2f6;
+                    color: #007fad;
+                    font-size: 13px;
+                    border-radius: 2px;
+                    margin-top: 8px;
+                    margin-left: 8px;
+                    margin-right: 8px;
                 }
-                    .body .second-body-row .Imformation2 #first-price span{
-                        
+
+                    .body .second-body-row .Imformation2 #first-price :last-child, .body .second-body-row .Imformation2 #second-price :last-child, .body .second-body-row .Imformation2 #third-price :last-child {
+                        font-weight: 700;
                     }
 
 
-                    @media screen and (max-width:800px) {
-                        .search-bar input[type="search"], .search-bar button[type="submit"] {
+                .body .second-body-row .Imformation2 #second-price, .body .second-body-row .Imformation2 #third-price {
+                    font-size: 13px;
+                    margin-top: 18px;
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    opacity: 0.5;
+                }
+
+
+        @media screen and (max-width:800px) {
+            .search-bar input[type="search"], .search-bar button[type="submit"] {
                 width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
             }
         }
@@ -385,7 +398,7 @@
                             <p>Property type</p>
                             <select id="property-type" name="rating">
                                 <option disabled selected>All</option>
-                                <option style="color:black" value="1">One star</option>
+                                <option style="color: black" value="1">One star</option>
                                 <option style="color:black" value="2">Two stars</option>
                                 <option style="color:black" value="3">Three stars</option>
                                 <option style="color:black" value="4">Four stars</option>
@@ -481,10 +494,22 @@
                     </div>
                     <!--------------------------------- Imformation2 ---------------------------------------------------------->
                     <div class="Imformation2">
-                        <div id="first-price">
+                        <div id="first-price" class="text-center">
                             <span>Hotel website</span><br />
-                            $<span>706</span>
+                            <span>$706</span>
                         </div>
+                        <div id="second-price" class="text-center">
+                            <span>Deal 2</span><br />
+                            <span>$806</span>
+                        </div>
+                        <div id="third-price" class="text-center">
+                            <span>Deal 3</span><br />
+                            <span>$1006</span>
+                        </div>
+                    </div>
+                    <!--------------------------------- Imformation3 ---------------------------------------------------------->
+                    <div class="Imformation3">
+
                     </div>
                 </div>
             </div>
@@ -492,7 +517,7 @@
     </div>
 
 
-    </div>
+
 
 
 
