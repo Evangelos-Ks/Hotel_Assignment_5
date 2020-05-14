@@ -46,6 +46,7 @@
         .header .search-bar2 .check-in {
             background-color: #007fad;
             margin-right: 7px;
+            border-radius: 2px;
         }
 
         .header .search-bar2 .check-out, .header .search-bar2 .check-in, .header .search-bar2 .room-type, .header .search-bar3 .left-border, .header .search-bar3 .left-border, .header .search-bar3 .center-border, .header .search-bar3 .right-border {
@@ -56,12 +57,14 @@
 
         .header .search-bar2 .check-out {
             background-color: #f48f00;
+            border-radius: 2px;
         }
 
             .header .search-bar2 .check-in input[type="date"], .header .search-bar2 .check-out input[type="date"] {
                 width: calc(100% - 7px);
                 height: 40px;
                 border: none;
+                border-radius: 0px 2px 2px 0px;
                 margin-left: 7px;
                 background-image: url('../Assignment5.Imagies/Check-in-out_icon.PNG');
                 background-repeat: no-repeat;
@@ -71,6 +74,7 @@
             }
 
         .header .search-bar2 .room-type {
+            border-radius: 2px;
             margin-left: 7px;
             background-color: white;
             background-image: url('../Assignment5.Imagies/Rooms_type.png');
