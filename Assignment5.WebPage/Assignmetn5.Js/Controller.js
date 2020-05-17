@@ -11,7 +11,9 @@
         function GetData() {
             $http.get(url)
                 .then(function (response) {
-                    console.log(response); //Take and display data
+
+                    $scope.Roomtypes = response.data[0].roomtypes; //roomtypes
+                    $scope.Hotels = response.data[1].entries; //entities
                 })
         };
 
