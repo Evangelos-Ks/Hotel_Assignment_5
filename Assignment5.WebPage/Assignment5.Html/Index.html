@@ -9,10 +9,13 @@
 
     <link href="../Assignment5.CSS/StyleSheet.css" rel="stylesheet" />
 
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Assignmetn5.Js/Controller.js"></script>
+
     <title>Koutsogiorgos Evangelos Assignment 5</title>
 </head>
-<body>
-    <div class="container ">
+<body ng-app="HotelApp">
+    <div class="container">
         <div class="header">
             <form action="/action_page.php">
                 <!--=============================== search-bar row 1 ====================================================-->
@@ -119,13 +122,13 @@
                 </div>
             </div>
             <!--=============================== Second row of main body==================================================-->
-            <div class="second-body-row">
+            <div class="second-body-row"  ng-controller="HotelController">
                 <div class="container-shadow row">
-                    <!--------------------------------- Image ----------------------------------------------------------------->
+                    <!--------------------------------- Image ------------------------------------------------------------->
                     <div class="image">
                         <img src="http://comerciodearrecife.com/wp-content/uploads/hotel-prueba-1.jpg" alt="" />
                     </div>
-                    <!--------------------------------- Information1 ---------------------------------------------------------->
+                    <!--------------------------------- Information1 ------------------------------------------------------>
                     <div class="Information1">
                         <p id="hotelName">Hotel Lancaster</p>
                         <div id="starRating-div" class="row">
@@ -149,7 +152,7 @@
                             <p><span id="ratings-text">Excellent</span> location (<span id="ratings-no">8.6</span>/10)</p>
                         </div>
                     </div>
-                    <!--------------------------------- Information2 ---------------------------------------------------------->
+                    <!--------------------------------- Information2 ------------------------------------------------------>
                     <div class="Information2">
                         <div id="first-price" class="text-center">
                             <span>Hotel website</span><br />
@@ -165,7 +168,7 @@
                             <span>$1006</span>
                         </div>
                     </div>
-                    <!--------------------------------- Information3 ---------------------------------------------------------->
+                    <!--------------------------------- Information3 ------------------------------------------------------>
                     <div class="Information3 text-center">
                         <p>Hotel website</p>
                         <span id="information3-hotelPrice">$706</span>
@@ -183,9 +186,8 @@
 
 
 
-
     <script src="../Scripts/jquery-3.5.0.js"></script>
-    <script src="../Scripts/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../Scripts/bootstrap.js"></script>
 
     <script>
