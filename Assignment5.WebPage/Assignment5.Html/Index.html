@@ -19,10 +19,10 @@
     <div class="container">
         <div class="header">
             <!--=============================== search-bar row 1 ====================================================-->
-                <div class="search-bar row autocomplete">
-                    <input id="search" type="search" name="search" placeholder="City">
-                    <button id="submitBtn" type="submit" >Search</button>
-                </div>
+            <div class="search-bar row autocomplete">
+                <input id="search" type="search" name="search" placeholder="City">
+                <button id="submitBtn" type="submit">Search</button>
+            </div>
             <!--=============================== search-bar row 2 ====================================================-->
             <div class="search-bar2">
                 <!--------------------------------- check-in ---------------------------------------------------------->
@@ -49,7 +49,7 @@
                 <div class="left-border" ng-model="MaxPrice2">
                     <div class="price" ng-model="MaxPrice">
                         <p>Price  <span valueSpan2"></span> <span>Max:  €{{MaxPrice}}</span></p>
-                        <input  ng-model="MaxPrice" type="range" class="custom-range" id="customRange1" min="0" max="{{MaxPrice2}}" name="price">
+                        <input ng-model="MaxPrice" type="range" class="custom-range" id="customRange1" min="0" max="{{MaxPrice2}}" name="price">
                     </div>
                 </div>
                 <!--------------------------------- cntral-part ------------------------------------------------------->
@@ -58,11 +58,11 @@
                         <p>Property type</p>
                         <select id="property-type" name="rating">
                             <option disabled selected>All</option>
-                            <option style="color: black " value="1">One star</option>
-                            <option style="color:black" value="2">Two stars</option>
-                            <option style="color:black" value="3">Three stars</option>
-                            <option style="color:black" value="4">Four stars</option>
-                            <option style="color:black" value="5">Five stars</option>
+                            <option style="color: black " value="1">1 star</option>
+                            <option style="color:black" value="2">2 stars</option>
+                            <option style="color:black" value="3">3 stars</option>
+                            <option style="color:black" value="4">4 stars</option>
+                            <option style="color:black" value="5">5 stars</option>
                         </select>
                     </div>
                     <div class="guest-rating">
@@ -129,11 +129,7 @@
                     <div class="Information1">
                         <p id="hotelName">{{Hotel.hotelName}}</p>
                         <div id="starRating-div" class="row">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked" ng-repeat="stars in [].constructor(Hotel.rating) track by $index"></span>
                             <p>Hotel</p>
                         </div>
                         <div id="city">
@@ -186,24 +182,6 @@
     <script src="../Scripts/jquery-3.5.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../Scripts/bootstrap.js"></script>
-
-    <!--<script>
-        $(document).ready(function () {
-
-            displayMaxValue();
-
-        });
-
-        function displayMaxValue() {
-            const $valueSpan = $('.valueSpan2');
-            const $value = $('#customRange1');
-            $valueSpan.html($value.val());
-            $value.on('input change', () => {
-
-                $valueSpan.html($value.val());
-            });
-        }
-    </script>-->
 
 
 </body>

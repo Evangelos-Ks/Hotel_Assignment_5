@@ -30,8 +30,10 @@
                     $scope.Hotels = response.data[1].entries; //Hotels
                     $scope.MaxPrice = MaxPrice(response.data[1].entries);//max price
                     $scope.MaxPrice2 = MaxPrice(response.data[1].entries);//max price
-
-
+                    $scope.getRepeater = function (num) {
+                        return new Array(num);
+                    };
+                
                     //autocomplete
                     autocomplete(document.getElementById("search"), AutocompleteItems(response.data[1].entries));
 
@@ -68,6 +70,9 @@
                     $scope.filterPrice = function (obj) {
                         return obj.price > 0 && obj.price <= $scope.MaxPrice;
                     };
+
+
+                    
 
                 });
 
