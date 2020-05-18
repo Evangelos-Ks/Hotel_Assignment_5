@@ -406,8 +406,4 @@
     color: #ffffff;
 }
 
-    @media screen and (max-width:800px) {
-        .search-bar input[type="search"], .search-bar button[type="submit"] {
-            width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-        }
-    }
+  

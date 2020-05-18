@@ -3,7 +3,6 @@
 
     for (var hotel in Hotels) {
         autocompleteItems.push(Hotels[hotel].city);
-        autocompleteItems.push(Hotels[hotel].hotelName);
     }
 
     return autocompleteItems;
