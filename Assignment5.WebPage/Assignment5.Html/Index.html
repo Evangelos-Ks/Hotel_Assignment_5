@@ -67,13 +67,13 @@
                     </div>
                     <div class="guest-rating">
                         <p>Guest rating</p>
-                        <select id="guest-rating" name="guestrating">
-                            <option disabled selected>All</option>
-                            <option style="color:black" value="Onestar">One star</option>
-                            <option style="color:black" value="Twostars">Two stars</option>
-                            <option style="color:black" value="Threestars">Three stars</option>
-                            <option style="color:black" value="Fourstars">Four stars</option>
-                            <option style="color:black" value="Fivestars">Five stars</option>
+                        <select id="guest-rating" name="guestrating" ng-model="search.ratings.text">
+                            <option selected value="">All</option>
+                            <option style="color:black" value="Okey">0-2 Okey</option>
+                            <option style="color:black" value="Fair">2-6 Fair</option>
+                            <option style="color:black" value="Good">6-7 Good</option>
+                            <option style="color:black" value="VeryGood">7-8.5 Very Good</option>
+                            <option style="color:black" value="Excellent">8.5-10 Excellent</option>
                         </select>
                     </div>
                 </div>

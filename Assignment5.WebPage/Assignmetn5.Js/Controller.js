@@ -33,7 +33,7 @@
                     $scope.getRepeater = function (num) {
                         return new Array(num);
                     };
-                
+
                     //autocomplete
                     autocomplete(document.getElementById("search"), AutocompleteItems(response.data[1].entries));
 
@@ -58,13 +58,13 @@
                             hotels = [];
                         }
                         else {
-                            $scope.Hotels = response.data[1].entries; 
+                            $scope.Hotels = response.data[1].entries;
                             $scope.MaxPrice = MaxPrice(response.data[1].entries);
                             $scope.MaxPrice2 = MaxPrice(response.data[1].entries);
                             $scope.$apply();
                             hotels = [];
                         }
-                        
+
                     });
 
                     $scope.filterPrice = function (obj) {
@@ -75,8 +75,12 @@
                         return obj.rating > 0 && obj.rating >= 5;
                     }
 
+                    $scope.filterRaitingsNo = function (obj) {
+                        if (obj.ratings.text == "") {
+                            return "";
+                        }
+                    }
 
-                    
 
                 });
 
