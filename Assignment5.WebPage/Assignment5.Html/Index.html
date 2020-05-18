@@ -46,10 +46,10 @@
             <!--=============================== search-bar row 3 ====================================================-->
             <div class="search-bar3 row">
                 <!--------------------------------- left-part --------------------------------------------------------->
-                <div class="left-border">
-                    <div class="price">
-                        <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
-                        <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
+                <div class="left-border" ng-model="MaxPrice2">
+                    <div class="price" ng-model="MaxPrice">
+                        <p>Price  <span valueSpan2"></span> <span>Max:  €{{MaxPrice}}</span></p>
+                        <input  ng-model="MaxPrice" type="range" class="custom-range" id="customRange1" min="0" max="{{MaxPrice2}}" name="price">
                     </div>
                 </div>
                 <!--------------------------------- cntral-part ------------------------------------------------------->
@@ -120,7 +120,7 @@
             </div>
             <!--=============================== Second row of main body==================================================-->
             <div class="second-body-row">
-                <div class="container-shadow row mb-2" ng-repeat="Hotel in Hotels">
+                <div class="container-shadow row mb-2" ng-repeat="Hotel in Hotels | filter:filterPrice | filter:search:strict">
                     <!--------------------------------- Image ------------------------------------------------------------->
                     <div class="image">
                         <img ng-src={{Hotel.thumbnail}} alt="" />
@@ -187,7 +187,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../Scripts/bootstrap.js"></script>
 
-    <script>
+    <!--<script>
         $(document).ready(function () {
 
             displayMaxValue();
@@ -203,7 +203,7 @@
                 $valueSpan.html($value.val());
             });
         }
-    </script>
+    </script>-->
 
 
 </body>
