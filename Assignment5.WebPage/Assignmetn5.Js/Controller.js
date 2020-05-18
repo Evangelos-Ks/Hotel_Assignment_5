@@ -1,7 +1,10 @@
 ﻿
+
+
 (function () {
     var HotelApp = angular.module("HotelApp", []);
 
+    var Hotels;
     var url = "../data.json";
 
 
@@ -13,30 +16,16 @@
                 .then(function (response) {
 
                     $scope.Roomtypes = response.data[0].roomtypes; //roomtypes
-                    $scope.Hotels = response.data[1].entries; //entities
+                    $scope.Hotels = response.data[1].entries; //Hotels
+
+                    autocomplete(document.getElementById("search"), AutocompleteItems(response.data[1].entries));
                 })
+                
         };
 
         GetData();//Execute GetData
     };
-
+   
         HotelApp.controller("HotelController", HotelController);
 })();
-
-//app.controller('myCtrl', function ($scope, $http) {
-//    $http.get("welcome.htm")
-//        .then(function (response) {
-//            $scope.content = response.data;
-//            $scope.statuscode = response.status;
-//            $scope.statustext = response.statusText;
-//        });
-//});
-//function ($scope, $http) {
-//    $http.get("welcome.htm")
-//        .then(function (response) {
-//            $scope.content = response.data;
-//            $scope.statuscode = response.status;
-//            $scope.statustext = response.statusText;
-//        });
-//});
 

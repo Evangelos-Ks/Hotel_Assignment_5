@@ -10,94 +10,93 @@
     <link href="../Assignment5.CSS/StyleSheet.css" rel="stylesheet" />
 
     <script src="../Scripts/angular.js"></script>
+    <script src="../Assignmetn5.Js/Autocomplete.js"></script>
     <script src="../Assignmetn5.Js/Controller.js"></script>
 
     <title>Koutsogiorgos Evangelos Assignment 5</title>
 </head>
-<body ng-app="HotelApp">
+<body ng-app="HotelApp" ng-controller="HotelController">
     <div class="container">
         <div class="header">
-            <form action="/action_page.php">
-                <!--=============================== search-bar row 1 ====================================================-->
-                <div class="search-bar row">
-                    <input type="search" name="search">
+            <!--=============================== search-bar row 1 ====================================================-->
+            <form action="/action_page.php" autocomplete="off">
+                <div class="search-bar row autocomplete">
+                    <input id="search" type="search" name="search" placeholder="City or hotel">
                     <button type="submit">Search</button>
                 </div>
-                <!--=============================== search-bar row 2 ====================================================-->
-                <div class="search-bar2">
-                    <!--------------------------------- check-in ---------------------------------------------------------->
-                    <div class="check-in">
-                        <input type="date" name="checkIn">
+            </form>
+            <!--=============================== search-bar row 2 ====================================================-->
+            <div class="search-bar2">
+                <!--------------------------------- check-in ---------------------------------------------------------->
+                <div class="check-in">
+                    <input type="date" name="checkIn">
+                </div>
+                <!--------------------------------- check-out --------------------------------------------------------->
+                <div class="check-out">
+                    <input type="date" name="checkOut">
+                </div>
+                <!--------------------------------- room-type --------------------------------------------------------->
+                <div class="room-type">
+                    <select id="room-type-select" name="roomType">
+                        <option value="" disabled selected>Room Type</option>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
+                        <option value="FamilyRooms">Family rooms</option>
+                    </select>
+                </div>
+            </div>
+            <!--=============================== search-bar row 3 ====================================================-->
+            <div class="search-bar3 row">
+                <!--------------------------------- left-part --------------------------------------------------------->
+                <div class="left-border">
+                    <div class="price">
+                        <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
+                        <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
                     </div>
-                    <!--------------------------------- check-out --------------------------------------------------------->
-                    <div class="check-out">
-                        <input type="date" name="checkOut">
+                </div>
+                <!--------------------------------- cntral-part ------------------------------------------------------->
+                <div class="center-border row">
+                    <div class="property-type">
+                        <p>Property type</p>
+                        <select id="property-type" name="rating">
+                            <option disabled selected>All</option>
+                            <option style="color: black " value="1">One star</option>
+                            <option style="color:black" value="2">Two stars</option>
+                            <option style="color:black" value="3">Three stars</option>
+                            <option style="color:black" value="4">Four stars</option>
+                            <option style="color:black" value="5">Five stars</option>
+                        </select>
                     </div>
-                    <!--------------------------------- room-type --------------------------------------------------------->
-                    <div class="room-type">
-                        <select id="room-type-select" name="roomType">
-                            <option value="" disabled selected>Room Type</option>
-                            <option value="Single">Single</option>
-                            <option value="Double">Double</option>
-                            <option value="FamilyRooms">Family rooms</option>
+                    <div class="guest-rating">
+                        <p>Guest rating</p>
+                        <select id="guest-rating" name="guestrating">
+                            <option disabled selected>All</option>
+                            <option style="color:black" value="Onestar">One star</option>
+                            <option style="color:black" value="Twostars">Two stars</option>
+                            <option style="color:black" value="Threestars">Three stars</option>
+                            <option style="color:black" value="Fourstars">Four stars</option>
+                            <option style="color:black" value="Fivestars">Five stars</option>
                         </select>
                     </div>
                 </div>
-                <!--=============================== search-bar row 3 ====================================================-->
-                <div class="search-bar3 row">
-                    <!--------------------------------- left-part --------------------------------------------------------->
-                    <div class="left-border">
-                        <div class="price">
-                            <p>Price  <span class="ml-2 valueSpan2"></span> <span class="ml-2">Max:  &dollar;</span></p>
-                            <input type="range" class="custom-range" id="customRange1" min="0" max="200" name="price">
-                        </div>
+                <!--------------------------------- right-part -------------------------------------------------------->
+                <div class="right-border row">
+                    <div class="lacation">
+                        <p>Hotel location</p>
+                        <select id="lacation" name="lacation">
+                            <option disabled selected>All</option>
+                            <option style="color:black" value="City">city</option>
+                        </select>
                     </div>
-                    <!--------------------------------- cntral-part ------------------------------------------------------->
-                    <div class="center-border row">
-                        <div class="property-type">
-                            <p>Property type</p>
-                            <select id="property-type" name="rating">
-                                <option disabled selected>All</option>
-                                <option style="color: black " value="1">One star</option>
-                                <option style="color:black" value="2">Two stars</option>
-                                <option style="color:black" value="3">Three stars</option>
-                                <option style="color:black" value="4">Four stars</option>
-                                <option style="color:black" value="5">Five stars</option>
-                            </select>
-                        </div>
-                        <div class="guest-rating">
-                            <p>Guest rating</p>
-                            <select id="guest-rating" name="guestrating">
-                                <option disabled selected>All</option>
-                                <option style="color:black" value="Onestar">One star</option>
-                                <option style="color:black" value="Twostars">Two stars</option>
-                                <option style="color:black" value="Threestars">Three stars</option>
-                                <option style="color:black" value="Fourstars">Four stars</option>
-                                <option style="color:black" value="Fivestars">Five stars</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!--------------------------------- right-part -------------------------------------------------------->
-                    <div class="right-border row">
-                        <div class="lacation">
-                            <p>Hotel location</p>
-                            <select id="lacation" name="lacation">
-                                <option disabled selected>All</option>
-                                <option style="color:black" value="City">city</option>
-                            </select>
-                        </div>
-                        <div class="filter">
-                            <p>Filters</p>
-                            <select id="filter" name="filters">
-                                <option disabled selected>All</option>
-                                <option style="color:black" value="City">Filters</option>
-                            </select>
-                        </div>
+                    <div class="filter">
+                        <p>Filters</p>
+                        <select id="filter" name="filters">
+                            <option disabled selected>All</option>
+                            <option style="color:black" value="City">Filters</option>
+                        </select>
                     </div>
                 </div>
-
-            </form>
-
+            </div>
         </div>
         <div class="body">
             <!--=============================== First row of main body===================================================-->
@@ -122,7 +121,7 @@
                 </div>
             </div>
             <!--=============================== Second row of main body==================================================-->
-            <div class="second-body-row" ng-controller="HotelController">
+            <div class="second-body-row">
                 <div class="container-shadow row mb-2" ng-repeat="Hotel in Hotels">
                     <!--------------------------------- Image ------------------------------------------------------------->
                     <div class="image">
