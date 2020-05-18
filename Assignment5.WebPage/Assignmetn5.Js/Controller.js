@@ -71,6 +71,10 @@
                         return obj.price > 0 && obj.price <= $scope.MaxPrice;
                     };
 
+                    $scope.filterRating = function (obj) {
+                        return obj.rating > 0 && obj.rating >= 5;
+                    }
+
 
                     
 

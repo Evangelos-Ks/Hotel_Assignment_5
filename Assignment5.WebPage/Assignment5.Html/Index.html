@@ -56,8 +56,8 @@
                 <div class="center-border row">
                     <div class="property-type">
                         <p>Property type</p>
-                        <select id="property-type" name="rating">
-                            <option disabled selected>All</option>
+                        <select id="property-type" name="rating" ng-model="search.rating">
+                            <option selected value="">All</option>
                             <option style="color: black " value="1">1 star</option>
                             <option style="color:black" value="2">2 stars</option>
                             <option style="color:black" value="3">3 stars</option>
@@ -120,7 +120,7 @@
             </div>
             <!--=============================== Second row of main body==================================================-->
             <div class="second-body-row">
-                <div class="container-shadow row mb-2" ng-repeat="Hotel in Hotels | filter:filterPrice | filter:search:strict">
+                <div class="container-shadow row mb-2" ng-repeat="Hotel in Hotels | filter:filterPrice | filter:search:strict:filterRating">
                     <!--------------------------------- Image ------------------------------------------------------------->
                     <div class="image">
                         <img ng-src={{Hotel.thumbnail}} alt="" />
