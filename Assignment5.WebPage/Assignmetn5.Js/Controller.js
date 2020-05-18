@@ -24,7 +24,26 @@
                         }
                         return price;
                     }
+                    name.toString();
 
+                    function AllFilters(Hotels) {
+                        var filtersArray = [];
+                        var returnfiltersArray = [];
+                        for (var i in Hotels) {
+                            filtersArray.push(Hotels[i].filters);
+                            for (var j in Hotels[i].filters) {
+                                if (returnfiltersArray.includes(Hotels[i].filters[j].name)) {
+
+                                }
+                                else {
+                                    returnfiltersArray.push(Hotels[i].filters[j].name);
+                                }
+                            }
+                        }
+
+                        //console.log(returnfiltersArray);
+                        return returnfiltersArray;
+                    }
 
                     $scope.Roomtypes = response.data[0].roomtypes; //roomtypes
                     $scope.Hotels = response.data[1].entries; //Hotels
@@ -33,6 +52,7 @@
                     $scope.getRepeater = function (num) {
                         return new Array(num);
                     };
+                    $scope.GeneralFilters = AllFilters(response.data[1].entries);
 
                     //autocomplete
                     autocomplete(document.getElementById("search"), AutocompleteItems(response.data[1].entries));
@@ -80,6 +100,7 @@
                             return "";
                         }
                     }
+
 
 
                 });

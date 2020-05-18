@@ -81,16 +81,16 @@
                 <div class="right-border row">
                     <div class="lacation">
                         <p>Hotel location</p>
-                        <select id="lacation" name="lacation">
-                            <option disabled selected>All</option>
-                            <option style="color:black" value="City">city</option>
+                        <select id="lacation" name="lacation" ng-model="search.city">
+                            <option selected value="">All</option>
+                            <option style="color:black" value="{{Hotel.city}}" ng-repeat="Hotel in Hotels">{{Hotel.city}}</option>
                         </select>
                     </div>
                     <div class="filter">
                         <p>Filters</p>
-                        <select id="filter" name="filters">
-                            <option disabled selected>All</option>
-                            <option style="color:black" value="City">Filters</option>
+                        <select id="filter" name="filters" ng-model="search.filters.name">
+                            <option selected value="">All</option>
+                            <option style="color:black" value="{{filter}}" ng-repeat="filter in GeneralFilters">{{filter}}</option>
                         </select>
                     </div>
                 </div>
@@ -111,9 +111,9 @@
                     <p>Sort by</p>
                 </div>
                 <div id="sortBy-div-list">
-                    <select id="sortBy-list" name="sortByList">
-                        <option disabled selected>Sorting</option>
-                        <option style="color:black" value="City">Filters</option>
+                    <select id="sortBy-list" name="sortByList" ng-model="search.filters.name">
+                        <option selected value="">All</option>
+                        <option style="color:black" value="{{filter}}" ng-repeat="filter in GeneralFilters">{{filter}}</option>
                     </select>
                     <i class="fa fa-info-circle" style="font-size:20px; color: gray;"></i>
                 </div>
