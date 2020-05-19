@@ -13,22 +13,8 @@
     <script src="../Assignmetn5.Js/Autocomplete.js"></script>
     <script src="../Assignmetn5.Js/Controller.js"></script>
     <script src="../Scripts/jquery-3.5.0.js"></script>
+    <script src="../Assignmetn5.Js/Map.js"></script>
 
-    <script>
-        function postYourAdd() {
-            var iframe = $("#iframe");
-            iframe.attr("src", iframe.data("src"));
-            $("#iframe").css({ "visibility": 'visible' });
-
-
-            $("#map").click(function () {
-                $("#iframe").css({ "visibility": 'hidden' });
-                $("#map").off("click");
-            });
-
-            
-        }
-    </script>
 
     <title>Koutsogiorgos Evangelos Assignment 5</title>
 </head>
@@ -118,7 +104,7 @@
             <div class="first-body-row row">
                 <!--------------------------------- Map ------------------------------------------------------------------->
                 <div id="backgroundMap">
-                    <button id="map" onclick="postYourAdd()">View Map</button>
+                    <button id="map" onclick="SwowMap()">View Map</button>
                     <iframe id="iframe"
                             frameborder="0" style="border:0"
                             data-src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83998.94722687619!2d2.277019841665155!3d48.8588377391234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1554987763683!5m2!1sen!2sgr"

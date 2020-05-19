@@ -94,15 +94,6 @@
                     $scope.filterRating = function (obj) {
                         return obj.rating > 0 && obj.rating >= 5;
                     }
-
-                    $scope.filterRaitingsNo = function (obj) {
-                        if (obj.ratings.text == "") {
-                            return "";
-                        }
-                    }
-
-
-
                 });
 
         };
